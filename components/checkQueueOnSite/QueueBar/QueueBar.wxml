@@ -1,0 +1,15 @@
+<!--components/checkQueueOnSite/QueueBar/QueueBar.wxml-->
+<view class="queue-bar-container">
+	<view class="queue-bar-title">
+		{{title}}
+	</view>
+  <view class="queue-bar-mine"></view>
+	<view class="queue-bar-current">
+		<view class="queue-bar-current-position">
+			<image></image>
+			<text></text>
+		</view>
+	</view>
+	<view class="queue-bar-content">
+	</view>
+</view>

@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+<view class="login-container">
+  <view class="login-studentId-input login-input-box">
+    <image class="login-input-icon" src="{{studentIdIconSrc}}"></image>
+    <input class="login-input" placeholder="请输入学号" placeholder-class="login-placeholder" bindinput="getStudentId" value="{{studentId}}" ></input>
+  </view>
+    <view class="login-password-input login-input-box">
+    <image class="login-input-password-icon" src="{{passwordIconSrc}}"></image>
+    <input class="login-input" type="password" placeholder="初始密码为身份证后六位" placeholder-class="login-placeholder" value="{{password}}" bindinput="getPassword">    </input>
+    <image bindtap="clearPasswordInput" wx:if="{{isShowClearButton}}" class="login-input-clear" src="/images/index/clear.png"></image>
+  </view>
+  <view class="login-button {{isButtonActivate?'login-button-active':'login-button-normal'}}" bindtap="turnToMainPage">登录</view>
+  <view class="login-about" bindtap="turnToAboutPage">关于毕业典礼</view>
+</view>

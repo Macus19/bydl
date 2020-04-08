@@ -1,0 +1,46 @@
+/* pages/signup/signup.wxss */
+.signup-container{
+  width:100%;
+  height: 100%;
+  padding-top:4vh;
+}
+.signup-operator{
+  margin-top:12vh;
+}
+.signup-about{
+  display: flex;
+  justify-content: space-around;
+  color: #bebed4;
+  font-size: 28rpx;
+  padding: 10rpx 80rpx;
+}
+.signup-about-separator{
+  width:1px;
+  background-color: #e8e8f1
+}
+.signup-about-info-wrong{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.info-wrong-icon{
+  display: inline-block;
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 20rpx;
+}
+.sign-operator-button{
+  width:340rpx;
+  height: 100rpx;
+  background-color: #4343b7;
+  color: #fff;
+  border-radius: 100rpx;
+  text-align: center;
+  line-height: 70rpx;
+  margin: 2vh auto;
+}
+
+.sign-operator-button-active{
+  box-shadow: 0px 0px 29px 3px 
+		rgba(0, 0, 0, 0.08)
+}

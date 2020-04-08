@@ -1,0 +1,8 @@
+<!--components/about/TipBlock/TipBlock.wxml-->
+<view class="tip-block-container">
+  <view class="tip-block-left">
+  </view>
+  <view class="tip-block-right">
+    {{tip}}
+  </view>
+</view>

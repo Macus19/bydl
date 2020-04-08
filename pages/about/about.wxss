@@ -1,0 +1,12 @@
+/* pages/about/about.wxss */
+.about-btn{
+  width:340rpx;
+  height: 100rpx;
+  background-color: #4343b7;
+  color: #fff;
+  border-radius: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  margin: 2vh auto;
+  font-size: 36rpx;
+}

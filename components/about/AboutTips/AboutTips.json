@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "tip-block": "/components/about/TipBlock/TipBlock"
+  }
+}

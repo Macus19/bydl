@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "info-bar": "/components/signup/InfoBar/InfoBar",
+    "l-dialog": "/miniprogram_npm/lin-ui/dialog/index",
+    "van-dialog": "@vant/weapp/dialog/index"
+  },
+    "navigationBarTitleText": "报名",
+    "navigationBarTextStyle": "black"
+}

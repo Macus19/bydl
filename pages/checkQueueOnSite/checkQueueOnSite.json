@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "queue-bar":"/components/checkQueueOnSite/QueueBar/QueueBar"
+  }
+}

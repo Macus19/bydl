@@ -1,0 +1,15 @@
+/* components/about/TipBlock/TipBlock.wxss */
+.tip-block-container{
+  display: flex;
+  margin-top: 15rpx;
+}
+.tip-block-left{
+  background-color: #f9d4ce;
+  width:10rpx;
+  height: 46rpx;
+  margin: 0 20rpx;
+}
+.tip-block-right{
+  width:80%;
+  color: #333333;
+}

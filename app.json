@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/signup/signup",
+    "pages/main/main",
+    "pages/mine/mine",
+    "pages/about/about",
+    "components/about/TipBlock/TipBlock",
+    "pages/wrongInfomation/wrongInformation",
+    "pages/ceremonyScene/ceremonyScene",
+    "pages/scanedCeremonyScene/scanedCeremonyScene",
+    "pages/checkQueueOnSite/checkQueueOnSite"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "毕业典礼",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

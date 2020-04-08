@@ -1,0 +1,32 @@
+<!--components/wrongInformation/ChangeBar/ChangeBar.wxml-->
+<view class="change-bar-container">
+	<view class="change-bar-container-left">
+		<!-- 有误项选择 -->
+		<view class="change-bar-title">
+			<view class="change-bar-title-text">有误项</view>
+			<picker bindchange="changeTitle" value="{{wrongTitleIndex}}" range="{{wrongList}}" mode="selector">
+				<view class="wrong-title-picker">
+					<view class="wrong-title-item">{{wrongList[wrongTitleIndex]}}</view>
+					<image src="/images/wrongInfomation/more.png" class="change-bar-more-icon"></image>
+				</view>
+			</picker>
+		</view>
+		<!-- 更正项 -->
+		<view class="change-bar-value">
+			<view class="change-bar-value-text">更正</view>
+			<!-- 如果有选择列表就显示picker -->
+			<picker wx:if="{{isPicker}}" bindchange="changeValue" mode="selector" value="{{currentItemIndex}}" range="{{currentItemList}}">
+				<view class="wrong-value-picker">
+					<view class="wrong-value-item">{{currentItemList[currentItemIndex]}}</view>
+					<image src="/images/wrongInfomation/more.png" class="change-bar-more-icon"></image>
+				</view>
+			</picker>
+			<!-- 如果没有列表，让用户输入 -->
+			<input class="wrong-value-input" wx:else type="text" bindinput="getInput" value="{{currentItemValue}}" />
+		</view>
+	</view>
+	<view class="change-bar-container-right">
+		<image class="add-icon" bindtap="addOneBar" src="/images/wrongInfomation/add.png"></image>
+		<image class="del-icon" wx:if="{{!isFirstOne}}" bindtap="deleteOneBar" src="/images/wrongInfomation/delete .png"></image>
+	</view>
+</view>

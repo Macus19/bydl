@@ -1,0 +1,12 @@
+<!--components/index/IndexBotton/IndexBotton.wxml-->
+<view class="index-botton button-class">
+  <view class="index-button-main-title">
+    {{mainTitle}}
+  </view>
+    <view class="index-button-subtitle">
+    {{subTitle}}
+  </view>
+  <view class="go-button go-color">
+    GO
+  </view>
+</view>

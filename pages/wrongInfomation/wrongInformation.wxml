@@ -1,0 +1,16 @@
+<!--pages/wrongInfomation/wrongInformation.wxml-->
+<view class="wrong-info-container">
+	<block wx:for="{{barNum}}">
+		<wrong-bar isFirstOne="{{index==0}}" data-id="{{index}}" bind:changeWrongInfo="getWrongInfo" bind:changeBarNum="changeBarNum"></wrong-bar>
+	</block>
+	<!-- 其他建议 -->
+	<view class="wrong-info-others">
+		<view class="others-title">其他问题或建议</view>
+		<view class="others-value">
+			<input type="text" class="other-input" />
+		</view>
+	</view>
+	<view class="wrong-info-btn">
+		提交
+	</view>
+</view>

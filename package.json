@@ -1,0 +1,17 @@
+{
+  "name": "bydl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/weapp": "^1.1.0",
+    "lin-ui": "^0.7.5",
+    "weui": "^2.3.0",
+    "wux-weapp": "^3.8.5"
+  }
+}

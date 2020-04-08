@@ -1,0 +1,27 @@
+/* components/about/AboutTips/AboutTips.wxss */
+.about-tips-container{
+  padding: 10rpx 30rpx;
+}
+.about-tips-title-container{
+  position: relative;
+  height:100rpx;
+  padding: 10rpx;
+  line-height: 100rpx;
+  vertical-align: middle;
+}
+.about-tips-bg-circle{
+  position: absolute;
+  left: 0;
+  top:20rpx;
+  width:80rpx;
+  height:80rpx;
+  border-radius: 50%;
+  background-color: #f37560;
+  z-index: -1
+}
+.about-tips-title{
+  font-size: 48rpx;
+  margin-left: 40rpx;
+  line-height: 100rpx;
+  vertical-align: middle
+}

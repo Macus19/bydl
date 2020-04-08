@@ -1,0 +1,9 @@
+<!--components/signup/InfoBar/InfoBar.wxml-->
+<view class="infobar-container">
+  <view class="infobar-container-left">
+    {{title}}
+  </view>
+  <view class="infobar-container-right">
+    {{value}}
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<!--components/about/AboutTips/AboutTips.wxml-->
+<view class="about-tips-container">
+  <view class="about-tips-title-container">
+  <view class="about-tips-bg-circle">
+  </view>
+    <view class="about-tips-title">{{title}}</view>
+  </view>
+  <block wx:for="{{tips}}">
+    <tip-block tip="{{item}}"></tip-block>
+  </block>
+</view>

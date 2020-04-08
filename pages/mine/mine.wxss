@@ -1,0 +1,25 @@
+/* pages/mine/mine.wxss */
+.mine-container{
+  width:100%;
+  height: 100%;
+  padding-top:4vh;
+}
+.mine-operation{
+  margin-top:60vh
+}
+.mine-about{
+  color: #bebed4;
+  font-size: 28rpx;
+  padding: 10rpx 80rpx;
+  text-align: center;
+}
+.mine-logout-btn{
+  width:340rpx;
+  height: 100rpx;
+  background-color: #4343b7;
+  color: #fff;
+  border-radius: 50rpx;
+  text-align: center;
+  line-height: 100rpx;
+  margin: 2vh auto;
+}

@@ -1,0 +1,64 @@
+<!--pages/ceremonyScene/ceremonyScene.wxml-->
+<view class="ceremony-scene-container">
+	<!-- 顶部蓝色介绍 -->
+	<view class="ceremony-scene-top">
+		<!-- 介绍和用户头像 -->
+		<view class="ceremony-scene-top-introduction">
+			<view class="introduction-title">
+				<view>广东外语外贸大学</view>
+				<view>2020毕业典礼</view>
+			</view>
+			<!-- 个人信息头像 -->
+			<view class="introduction-avatar" bindtap="turnToLoginPage">
+				<image src="/images/main/my.png"></image>
+			</view>
+		</view>
+	</view>
+	<!-- 中间的框框 -->
+	<view class="ceremony-scene-middle">
+		<!-- 头部栏 -->
+		<view class="ceremony-scene-middle-topbar">
+			<view>正在颁发</view>
+			<view class="ceremony-scene-middle-topbar-number">{{currentCollage}}</view>
+		</view>
+		<!-- 分割线 -->
+		<view class="ceremony-scene-middle-divider"></view>
+		<!-- 显示博士、硕士、本科生人数 -->
+		<view class="ceremony-scene-middle-content">
+			<!-- 最左边介绍 -->
+			<view class="ceremony-scene-content-menu">
+				<view>报名人数</view>
+				<view>已颁人数</view>
+				<view>未颁人数</view>
+			</view>
+			<view class="ceremony-scene-content-right">
+				<!-- 博士 -->
+				<view class="ceremony-scene-content-doctor">
+					<view class="ceremony-scene-content-title">博士</view>
+					<view class="ceremony-scene-content-number">{{doctors.signup}}</view>
+					<view class="ceremony-scene-content-number">{{doctors.notAward}}</view>
+					<view class="ceremony-scene-content-number">{{doctors.awarded}}</view>
+				</view>
+				<!-- 硕士 -->
+				<view class="ceremony-scene-content-master">
+					<view class="ceremony-scene-content-title">硕士</view>
+					<view class="ceremony-scene-content-number">{{masters.signup}}</view>
+					<view class="ceremony-scene-content-number">{{masters.notAward}}</view>
+					<view class="ceremony-scene-content-number">{{masters.awarded}}</view>
+				</view>
+				<!-- 学士 -->
+				<view class="ceremony-scene-content-bachelor">
+					<view class="ceremony-scene-content-title">本科</view>
+					<view class="ceremony-scene-content-number">{{bachelors.signup}}</view>
+					<view class="ceremony-scene-content-number">{{bachelors.notAward}}</view>
+					<view class="ceremony-scene-content-number">{{bachelors.awarded}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 底部按钮栏 -->
+	<view class="ceremony-scene-bottom">
+		<view class="ceremony-scene-scan-btn" bindtap="turnToScanedCeremonyScene" hover-class="orange-btn-click">扫码加入</view>
+		<view class="ceremony-scene-checkList-btn" bindtap="turnToCheckQueueOnSite" hover-class="blue-btn-click">查看现场队列</view>
+	</view>
+</view>

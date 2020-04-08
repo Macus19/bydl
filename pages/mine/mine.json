@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "info-bar": "/components/signup/InfoBar/InfoBar",
+      "van-dialog": "/miniprogram_npm/@vant/weapp/dialog/index"
+  }
+}

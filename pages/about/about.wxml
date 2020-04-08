@@ -1,0 +1,6 @@
+<!--pages/about/about.wxml-->
+<view class="about-container">
+  <about-tips title="{{processTip.title}}" tips="{{processTip.tipList}}"></about-tips>
+  <about-tips title="{{attentionTip.title}}" tips="{{attentionTip.tipList}}"></about-tips>
+  <view class="about-btn" bindtap="turnBackPage">我已了解</view>
+</view>

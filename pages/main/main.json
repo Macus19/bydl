@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-row": "/miniprogram_npm/@vant/weapp/row/index",
+    "van-col": "/miniprogram_npm/@vant/weapp/col/index",
+    "index-botton": "/components/index/IndexBotton/IndexBotton"
+  },
+  "navigationBarBackgroundColor": "#4343b7",
+  "navigationBarTitleText": "毕业典礼",
+  "navigationBarTextStyle": "white"
+}

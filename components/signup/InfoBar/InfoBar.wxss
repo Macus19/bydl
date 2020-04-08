@@ -1,0 +1,13 @@
+/* components/signup/InfoBar/InfoBar.wxss */
+.infobar-container{
+  display: flex;
+  padding: 2vh 50rpx;
+  justify-content: space-between;
+  font-size: 34rpx;
+}
+.infobar-container-left{
+  color:#bebed4;
+}
+.infobar-container-right{
+ color: #333333
+}

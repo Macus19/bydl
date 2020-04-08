@@ -1,0 +1,113 @@
+/**index.wxss**/
+
+.main-top {
+  position: relative;
+  width: 100%;
+  height: 270rpx;
+  background-color: #4343b7;
+  padding-top: 4vh;
+}
+
+.main-top::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -100rpx;
+  z-index: -1;
+  content: '';
+  width: 100%;
+  height: 220rpx;
+  border-radius: 0 0 50% 50%;
+  background-color: #4343b7;
+}
+
+.main-top-introduction {
+  display: flex;
+  justify-content: space-around;
+  vertical-align: middle;
+}
+
+.introduction-title {
+  color: #fff;
+  font-weight: bold
+}
+
+.introduction-title view:first-child {
+  font-size: 50rpx;
+  line-height: 75rpx;
+}
+
+.introduction-title view:last-child {
+  font-size: 40rpx;
+}
+
+.introduction-avatar image {
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+}
+
+.introduction-avatar {
+  line-height: 120rpx;
+}
+
+.main-swiper {
+  margin-top: 3vh;
+}
+
+swiper {
+  display: block;
+  height: 170px;
+}
+
+.swiper-banner .wx-swiper-dot {
+  width: 15rpx;
+  height: 15rpx;
+  background: white;
+  border: 1rpx solid #4343b7;
+  border-radius: 15rpx;
+}
+
+.swiper-banner .wx-swiper-dot.wx-swiper-dot-active {
+  width: 15rpx;
+  height: 15rpx; 
+  background: white;
+  border-radius: 15rpx;
+}
+
+.swiper-image {
+  width: 100%;
+  height: 82%;
+  border-radius: 28rpx;
+}
+
+.slide-out {
+  transform: scale(0.8);
+  transition: all 0.7s ease-out 0s;
+}
+
+.slide-in {
+  transform: scale(1);
+  transition: all 0.7s ease-in 0s;
+  box-shadow: 0rpx 0rpx 29rpx 3rpx rgba(0, 0, 0, 0.08);
+}
+.main-bottom{
+  margin:300rpx auto 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 50rpx;
+}
+.sign-up{
+  background: url('http://106.52.187.15/marcus/signup.png');
+  background-size: 100% 100%
+}
+.sign-up-go{
+  background-color: #f37560;
+}
+.ceremony{
+  background: url('http://106.52.187.15/marcus/ceremony.png');
+  background-size: 100% 100%
+}
+.ceremony-go{
+  background-color: #4343b7;
+}

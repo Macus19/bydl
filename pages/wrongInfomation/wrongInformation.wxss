@@ -1,0 +1,26 @@
+/* pages/wrongInfomation/wrongInformation.wxss */
+.wrong-info-others{
+  padding: 20rpx 65rpx;
+}
+.others-title{
+  color: #bebed4;
+  margin: 15rpx 0;
+}
+.other-input{
+  width:600rpx;
+  min-height:75rpx;
+  border:solid 2rpx #4343b7;
+  border-radius: 37rpx;
+}
+.wrong-info-btn{
+  width: 340rpx;
+  height: 100rpx;
+  font-size: 36rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 100rpx;
+  vertical-align: middle;
+	background-color: #4343b7;
+  border-radius: 50rpx;
+  margin: 20rpx auto;
+}

@@ -1,0 +1,2 @@
+<!--pages/checkQueueOnSite/checkQueueOnSite.wxml-->
+<QueueBar></QueueBar>

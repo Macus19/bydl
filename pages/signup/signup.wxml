@@ -1,0 +1,37 @@
+<!--pages/signup/signup.wxml-->
+<view class="signup-container">
+  <!-- 个人信息展示 -->
+  <view class="signup-info">
+    <info-bar title="姓名" value="{{studentInfo.name}}">
+    </info-bar>
+    <info-bar title="学历" value="{{studentInfo.educationBackground}}">
+    </info-bar>
+    <info-bar title="学院" value="{{studentInfo.collage}}">
+    </info-bar>
+    <info-bar title="专业班级" value="{{studentInfo.majaoAndClass}}">
+    </info-bar>
+    <info-bar title="学号" value="{{studentInfo.studentID}}">
+    </info-bar>
+    <info-bar title="学位一" value="{{studentInfo.degreeOne}}">
+    </info-bar>
+    <info-bar title="学位二" value="{{studentInfo.degreeTwo}}">
+    </info-bar>
+    <info-bar title="国籍" value="{{studentInfo.nationality}}">
+    </info-bar>
+  </view>
+  <view class="signup-operator">
+    <view class="signup-about">
+      <view class="signup-about-ceremony" bindtap="turnToAboutPage">
+        关于毕业典礼
+      </view>
+      <view class="signup-about-separator">
+      </view>
+      <view class="signup-about-info-wrong"  bindtap="turnToWrongInfoPage">
+        <text>信息有误</text>
+        <image src="/images/signup/infoWrong.png" class="info-wrong-icon"></image>
+      </view>
+    </view>
+    <button class="sign-operator-button" bindtap="confirmSignup" hover-class="sign-operator-button-active">确认报名</button>
+    <van-dialog id="van-dialog" />
+  </view>
+</view>
