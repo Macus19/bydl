@@ -8,3 +8,7 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.blue-btn-click{
+  background-color: #2d2d75;
+}

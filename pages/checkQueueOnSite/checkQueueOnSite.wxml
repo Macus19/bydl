@@ -1,2 +1,41 @@
 <!--pages/checkQueueOnSite/checkQueueOnSite.wxml-->
-<QueueBar></QueueBar>
+<!-- 正在颁发队列 -->
+<view class="check-queue-current">
+	<view class="check-queue-current-title">正在颁发队列</view>
+	<!-- 当前位置信息 -->
+	<view class="check-queue-current-position-info">
+		<view class="current-position-info-group">
+			<image src="/images/checkQueueOnSite/group-purple.png"></image>
+			<text>{{currentPosition}}</text>
+		</view>
+		<view class="current-position-info-number">
+			<image src="/images/checkQueueOnSite/number-purple.png"></image>
+			<text>{{currentNumber}}</text>
+		</view>
+	</view>
+	<!-- 显示当前多少人 -->
+	<view class="check-queue-current-list">
+		<block wx:for="{{currentList}}">
+			<queue-bar class="check-queue-current-queue-bar" name="{{item.name}}" position="{{item.position}}" bg-color="bg-color"></queue-bar>
+		</block>
+	</view>
+</view>
+<view class="check-queue-ready">
+	<view class="check-queue-ready-title">准备队列</view>
+	<!-- 当前位置信息 -->
+	<view class="check-queue-ready-position-info">
+		<view class="ready-position-info-group">
+			<image src="/images/checkQueueOnSite/group-orange.png"></image>
+			<text>{{readyPosition}}</text>
+		</view>
+		<view class="ready-position-info-number">
+			<image src="/images/checkQueueOnSite/number-orange.png"></image>
+			<text>{{readyNumber}}</text>
+		</view>
+	</view>
+	<view class="check-queue-ready-list">
+		<block wx:for="{{currentList}}">
+			<queue-bar class="check-queue-ready-queue-bar" name="{{item.name}}" position="{{item.position}}" bg-color="bg-color-o"></queue-bar>
+		</block>
+	</view>
+</view>

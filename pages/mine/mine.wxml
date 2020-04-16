@@ -3,7 +3,7 @@
   <info-bar title="姓名" value="{{name}}"></info-bar>
   <info-bar title="学号" value="{{studentId}}"></info-bar>
   <view class="mine-operation">
-    <view class="mine-about">关于毕业典礼</view>
-    <view class="mine-logout-btn">退出登录</view>
+    <view class="mine-about" bindtap="turnToAboutPage">关于毕业典礼</view>
+    <view class="mine-logout-btn" hover-class="blue-btn-click">退出登录</view>
   </view>
 </view>

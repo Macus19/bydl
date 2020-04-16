@@ -1,1 +1,89 @@
 /* pages/checkQueueOnSite/checkQueueOnSite.wxss */
+.check-queue-current,.check-queue-ready{
+  margin: 50rpx auto;
+  width:100%;
+  padding-top: 20rpx;
+  background-color: #fff;
+  box-shadow: 0px 0px 29rpx 3rpx rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+.check-queue-current-title{
+  width: 270rpx;
+  height: 80rpx;
+  padding-left: 30rpx;
+  color:#fff;
+  line-height: 80rpx;
+  vertical-align: middle;
+  background-color: #4343b7;
+  border-radius: 0 40rpx 40rpx 0;
+  position: absolute;
+  top:-30rpx;
+  left:0
+}
+.check-queue-ready-title{
+  width: 270rpx;
+  height: 80rpx;
+  padding-left: 30rpx;
+  color:#fff;
+  line-height: 80rpx;
+  vertical-align: middle;
+  background-color: #f37560;
+  border-radius: 0 40rpx 40rpx 0;
+  position: absolute;
+  top:-30rpx;
+  left:0
+}
+.check-queue-current-position-info {
+  width:350rpx;
+  display: flex;
+  float: right;
+  overflow: hidden;
+  color: #bebed4;
+}
+.check-queue-ready-position-info{
+  width:350rpx;
+  display: flex;
+  float: right;
+  overflow: hidden;
+  color: #dfcecb;
+}
+.check-queue-current-position-info view{
+  padding: 0 15rpx;
+  line-height: 30rpx;
+  vertical-align: middle;
+}
+.check-queue-ready-position-info view{
+  padding: 0 15rpx;
+  line-height: 30rpx;
+  vertical-align: middle;
+}
+.check-queue-current-position-info view image{
+  width: 30rpx;
+  height: 30rpx;
+  padding: 0 5rpx;
+  line-height: 30rpx;
+  vertical-align: middle;
+}
+.check-queue-ready-position-info view image{
+  width: 30rpx;
+  height: 30rpx;
+  padding: 0 5rpx;
+  line-height: 30rpx;
+  vertical-align: middle;
+}
+.check-queue-current-list,.check-queue-ready-list{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40rpx 0;
+}
+.bg-color{
+  background-color:#4343b7
+}
+.check-queue-current-queue-bar,.check-queue-ready-queue-bar{
+  width:48%;
+}
+.bg-color-o{
+  background-color:#f37560
+}

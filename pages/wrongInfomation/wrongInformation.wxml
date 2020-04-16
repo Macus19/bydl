@@ -10,7 +10,7 @@
 			<input type="text" class="other-input" />
 		</view>
 	</view>
-	<view class="wrong-info-btn">
+	<view class="wrong-info-btn" hover-class="blue-btn-click">
 		提交
 	</view>
 </view>

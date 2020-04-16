@@ -5,7 +5,49 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    // 当前位置
+    currentPosition:'*组*位',
+    // 准备位置
+    readyPosition:'*组*位',
+    // 当前组
+    currentNumber:'1-8组',
+    // 准备组
+    readyNumber:'9-22组',
+    // 当前上台的队列
+    currentList:[
+      {
+        position:1,
+        name:'黄小饼',
+      },
+      {
+        position:1,
+        name:'黄小饼',
+      },
+      {
+        position:1,
+        name:'黄小饼',
+      },
+      {
+        position:1,
+        name:'黄小饼',
+      },
+      {
+        position:1,
+        name:'黄小饼',
+      },
+      {
+        position:1,
+        name:'黄小饼',
+      },
+      {
+        position:1,
+        name:'黄小饼',
+      },
+      {
+        position:1,
+        name:'黄小饼',
+      },
+    ]
   },
 
   /**

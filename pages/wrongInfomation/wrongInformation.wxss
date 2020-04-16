@@ -24,3 +24,6 @@
   border-radius: 50rpx;
   margin: 20rpx auto;
 }
+.blue-btn-click{
+  background-color: #2d2d75;
+}

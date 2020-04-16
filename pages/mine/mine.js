@@ -65,5 +65,14 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /**
+   * 跳转至关于毕业典礼页面
+   * @method turnToAboutPage
+   */
+  turnToAboutPage:function(){
+    wx.navigateTo({
+      url: '../about/about',
+    })
   }
 })

@@ -1,1 +1,22 @@
 /* components/checkQueueOnSite/QueueBar/QueueBar.wxss */
+.queue-bar-position{
+  width: 34rpx;
+  height: 34rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 34rpx;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+.queue-bar-container{
+  display: flex;
+  padding: 10rpx 5rpx;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+}
+.queue-bar-name,.queue-bar-pinyin{
+  line-height: 35rpx;
+  vertical-align: middle;
+  padding: 10rpx 5rpx;
+}

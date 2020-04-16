@@ -23,3 +23,6 @@
   line-height: 100rpx;
   margin: 2vh auto;
 }
+.blue-btn-click{
+  background-color: #2d2d75;
+}

@@ -31,7 +31,7 @@
         <image src="/images/signup/infoWrong.png" class="info-wrong-icon"></image>
       </view>
     </view>
-    <button class="sign-operator-button" bindtap="confirmSignup" hover-class="sign-operator-button-active">确认报名</button>
-    <van-dialog id="van-dialog" />
+    <button class="sign-operator-button" bindtap="confirmSignup" hover-class="blue-btn-click">确认报名</button>
+    <van-dialog id="van-dialog"  confirm-button-color="#4343b7"/>
   </view>
 </view>

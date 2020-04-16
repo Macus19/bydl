@@ -1,15 +1,6 @@
 <!--components/checkQueueOnSite/QueueBar/QueueBar.wxml-->
 <view class="queue-bar-container">
-	<view class="queue-bar-title">
-		{{title}}
-	</view>
-  <view class="queue-bar-mine"></view>
-	<view class="queue-bar-current">
-		<view class="queue-bar-current-position">
-			<image></image>
-			<text></text>
-		</view>
-	</view>
-	<view class="queue-bar-content">
-	</view>
+	<view class="queue-bar-position bg-color">{{position}}</view>
+	<view class="queue-bar-name">{{name}}</view>
+	<view class="queue-bar-pinyin">{{pinyin}}</view>
 </view>

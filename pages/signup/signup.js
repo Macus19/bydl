@@ -1,6 +1,5 @@
 // pages/signup/signup.js
 import Dialog from '@vant/weapp/dialog/dialog'
-import { wuxDialog } from 'wux-weapp'
 
 Page({
   /**

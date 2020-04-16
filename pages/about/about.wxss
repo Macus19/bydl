@@ -10,3 +10,6 @@
   margin: 2vh auto;
   font-size: 36rpx;
 }
+.blue-btn-click{
+  background-color: #4343b7;
+}

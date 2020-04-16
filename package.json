@@ -10,8 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "@vant/weapp": "^1.1.0",
-    "lin-ui": "^0.7.5",
-    "weui": "^2.3.0",
-    "wux-weapp": "^3.8.5"
+    "js-pinyin": "^0.1.9"
   }
 }

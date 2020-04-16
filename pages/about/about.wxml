@@ -2,5 +2,5 @@
 <view class="about-container">
   <about-tips title="{{processTip.title}}" tips="{{processTip.tipList}}"></about-tips>
   <about-tips title="{{attentionTip.title}}" tips="{{attentionTip.tipList}}"></about-tips>
-  <view class="about-btn" bindtap="turnBackPage">我已了解</view>
+  <view class="about-btn" hover-class="blue-btn-click" bindtap="turnBackPage">我已了解</view>
 </view>
