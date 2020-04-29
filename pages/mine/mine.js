@@ -1,4 +1,6 @@
 // pages/mine/mine.js
+import Dialog from '@vant/weapp/dialog/dialog'
+
 Page({
 
   /**
@@ -73,6 +75,20 @@ Page({
   turnToAboutPage:function(){
     wx.navigateTo({
       url: '../about/about',
+    })
+  },
+  /**
+   * 退出登录跳转至首页
+   * @method turnToIndexPage
+   */
+  turnToIndexPage:function(){
+    Dialog.confirm({
+      title:'确定要退出吗？',
+      message:'将会返回登录页面'
+    }).then(()=>{
+      wx.reLaunch({
+        url: '../index/index',
+      })
     })
   }
 })

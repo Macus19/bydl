@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "wrong-bar": "/components/wrongInformation/ChangeBar/ChangeBar"
+    "wrong-bar": "/components/wrongInformation/ChangeBar/ChangeBar",
+    "van-dialog": "@vant/weapp/dialog/index"
   }
 }

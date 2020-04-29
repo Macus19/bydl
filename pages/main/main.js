@@ -35,10 +35,10 @@ Page({
     })
   },
     /**
-   * 跳转至登录页面
-   * @method turnToLoginPage
+   * 跳转至我的页面
+   * @method turnToMinePage
    */
-  turnToLoginPage: function(){
+  turnToMinePage: function(){
     wx.navigateTo({
       url: '../mine/mine',
     })

@@ -22,7 +22,7 @@
 		"nodeModules": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.8.0",
+	"libVersion": "2.11.0",
 	"appid": "wxb1ea62a6c1b2e06c",
 	"projectname": "bydl",
 	"debugOptions": {

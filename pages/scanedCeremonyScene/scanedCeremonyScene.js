@@ -13,6 +13,8 @@ Page({
     studentId: '20171000000',
     // 当前位置
     myPosition: '1组1位',
+    // 位置编号
+    myNumber: 1,
     // 正在颁发的学院
     currentCollage: '商学院',
     // 博士生
@@ -94,14 +96,33 @@ Page({
    * 退出当前队列
    * @method  quitQueue
    */
-  quitQueue:function(){
+  quitQueue: function () {
     Dialog.confirm({
-      title:'确定退出队列？',
-      message:'退出后排队请再次扫码'
-    }).then(()=>{
+      title: '确定退出队列？',
+      message: '退出后排队请再次扫码'
+    }).then(() => {
       wx.navigateBack({
-        delta:1
+        delta: 1
       })
+    })
+  },
+  /**
+   * 跳转至我的页面
+   * @method turnToMinePage
+   */
+  turnToMinePage: function () {
+    wx.navigateTo({
+      url: '../mine/mine',
+    })
+  },
+  /**
+   * 跳转到查看现场队列页面
+   * @method turnToScanedCeremonyScene
+   */
+  turnToCheckQueueOnSite: function () {
+    let isInQueue = true
+    wx.navigateTo({
+      url: `../checkQueueOnSite/checkQueueOnSite?isInQueue=${isInQueue}`,
     })
   }
 })

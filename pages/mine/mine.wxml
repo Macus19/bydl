@@ -4,6 +4,7 @@
   <info-bar title="学号" value="{{studentId}}"></info-bar>
   <view class="mine-operation">
     <view class="mine-about" bindtap="turnToAboutPage">关于毕业典礼</view>
-    <view class="mine-logout-btn" hover-class="blue-btn-click">退出登录</view>
+    <view class="mine-logout-btn" bindtap="turnToIndexPage" hover-class="blue-btn-click">退出登录</view>
   </view>
+  <van-dialog id="van-dialog"  confirm-button-color="#4343b7"/>
 </view>

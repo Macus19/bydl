@@ -3,24 +3,53 @@ Component({
   /**
    * 组件生命周期
    */
-  lifetimes:{
-    ready: function(){
-      this.setData({
-        ['wrongObj.title']: this.data.wrongList[this.data.wrongTitleIndex],
-        ['wrongObj.value']: ''
+  lifetimes: {
+    attached: function () {
+      // this.setData({
+      //   ['wrongObj.title']: this.data.wrongList[this.data.wrongTitleIndex],
+      //   ['wrongObj.value']: ''
+      // })
+      // this.triggerEvent('changeWrongInfo', this.data.wrongObj)
+      // console.log(this.data.isFirstOne)
+      let wrongTitleIndex = this.data.wrongList.findIndex((item)=>{
+        return item == this.data.wrongObj.title
       })
-      this.triggerEvent('changeWrongInfo',this.data.wrongObj)
-      console.log(this.data.isFirstOne)
+      let currentItemList= this.data.objectArray[wrongTitleIndex]
+      let currentItemValue
+      let currentItemIndex
+      if(currentItemList.length>0){
+        currentItemIndex = currentItemList.findIndex((item)=>{
+          return item == this.data.wrongObj.value
+        })
+      }else{
+        currentItemValue = this.data.wrongObj.value
+      }
+      this.setData({
+        wrongTitleIndex,
+        currentItemList,
+        currentItemIndex,
+        currentItemValue
+      })
+      console.log(this.data.wrongObj)
+      console.log(wrongTitleIndex)
+      console.log(currentItemList)
+      console.log(currentItemIndex)
+      console.log(currentItemValue)
     }
   },
   /**
    * 组件的属性列表
    */
   properties: {
-    // 是否第一个选项卡
-    isFirstOne:{
+    // 是否最后一个选项卡
+    isLastOne:{
       type:Boolean,
       value:false
+    },
+    // 错误项键值对
+    wrongObj:{
+      type:Object,
+      value:{}
     }
   },
 
@@ -57,11 +86,6 @@ Component({
       ['理学学位'],
       []
     ],
-    // 错误项键值对
-    wrongObj: {
-      title: '',
-      value: ''
-    }
   },
 
   /**
@@ -78,7 +102,7 @@ Component({
         wrongTitleIndex: e.detail.value,
         ['wrongObj.title']: this.data.wrongList[e.detail.value],
       })
-      this.triggerEvent('changeWrongInfo',this.data.wrongObj)
+      this.triggerEvent('changeWrongInfo', this.data.wrongObj)
       this.isShowPicker()
     },
     /**
@@ -92,7 +116,7 @@ Component({
           currentItemIndex: e.detail.value,
           ['wrongObj.value']: this.data.currentItemList[e.detail.value]
         })
-        this.triggerEvent('changeWrongInfo',this.data.wrongObj)
+        this.triggerEvent('changeWrongInfo', this.data.wrongObj)
         console.log(this.data.wrongObj)
       }
     },
@@ -106,9 +130,9 @@ Component({
         this.setData({
           isPicker: false,
           // 清空当前值
-          ['wrongObj.value']:''
+          ['wrongObj.value']: ''
         })
-        this.triggerEvent('changeWrongInfo',this.data.wrongObj)
+        this.triggerEvent('changeWrongInfo', this.data.wrongObj)
         return
       } else {
         this.setData({
@@ -131,7 +155,7 @@ Component({
         this.setData({
           ['wrongObj.value']: this.data.currentItemList[0]
         })
-        this.triggerEvent('changeWrongInfo',this.data.wrongObj)
+        this.triggerEvent('changeWrongInfo', this.data.wrongObj)
       }
     },
     /**
@@ -150,6 +174,7 @@ Component({
     deleteOneBar: function () {
       let num = -1
       this.triggerEvent('changeBarNum', num)
+      this.txt()
     },
     /**
      * 如果是输入框，就直接将value设为用户输入
@@ -161,7 +186,28 @@ Component({
         ['wrongObj.value']: e.detail.value
       })
       console.log(this.data.wrongObj)
-      this.triggerEvent('changeWrongInfo',this.data.wrongObj)
+      this.triggerEvent('changeWrongInfo', this.data.wrongObj)
+    },
+    txt:function(){
+      let wrongTitleIndex = this.data.wrongList.findIndex((item)=>{
+        return item == this.data.wrongObj.title
+      })
+      let currentItemList= this.data.objectArray[wrongTitleIndex]
+      let currentItemValue
+      let currentItemIndex
+      if(currentItemList.length>0){
+        currentItemIndex = currentItemList.findIndex((item)=>{
+          return item == this.data.wrongObj.value
+        })
+      }else{
+        currentItemValue = this.data.wrongObj.value
+      }
+      this.setData({
+        wrongTitleIndex,
+        currentItemList,
+        currentItemIndex,
+        currentItemValue
+      })
     }
   },
 })

@@ -1,14 +1,19 @@
 // pages/wrongInfomation/wrongInformation.js
+import Dialog from '@vant/weapp/dialog/dialog'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    // 当前选项卡个数
-    barNum:1,
-    // 有误项数组，元素为title-value对象
-    wrongInfoArray: []
+    // 有误项数组，元素为id-title-value对象
+    wrongInfoArray: [
+      {
+        title:'姓名',
+        value:''
+      }
+    ]
   },
 
   /**
@@ -71,39 +76,62 @@ Page({
    * @param {*} e 
    * @method changeBarNum
    */
-  changeBarNum:function(e){
+  changeBarNum: function (e) {
     let num = e.detail
-    let currentItemIndex = e.currentTarget.dataset.id
-    console.log(currentItemIndex)
-    this.setData({
-      barNum: parseInt(this.data.barNum)+parseInt(num)
-    })
-    // 如果点击删除按钮，将相应的wronginfo中的对象删除
-    if(num<0){
-      this.data.wrongInfoArray.splice(currentItemIndex,1)
+    if (num > 0) {
+      let current = {
+        title:'姓名',
+        value:''
+      }
+      let wrongInfoArray = this.data.wrongInfoArray
+      wrongInfoArray.push(current)
+      this.setData({
+        wrongInfoArray
+      })
+      console.log(this.data.wrongInfoArray)
     }
-    console.log(this.data.wrongInfoArray)
+    // 如果点击删除按钮，将相应的wronginfo中的对象删除
+    else if (num < 0) {
+      let idx = e.currentTarget.dataset.idx
+      let wrongInfoArray = this.data.wrongInfoArray
+      wrongInfoArray.splice(idx,1)
+      this.setData({
+        wrongInfoArray
+      })
+      this.selectAllComponents
+      console.log(this.data.wrongInfoArray)
+    }
   },
   /**
    * 获得当前的错误选项键值对
    * @param {*} e 
    */
-  getWrongInfo:function(e){
+  getWrongInfo: function (e) {
     // 当前的有误项填写的键值对
     let wrongInfo = e.detail
     // 当前选项卡的索引
-    let index = e.currentTarget.dataset.id
+    let idx = e.currentTarget.dataset.idx
     // 检测是不是修改已经存在的选项卡（不是添加
-    let isExisted = this.data.wrongInfoArray.findIndex((item)=>{
-      return item.index == index
-    })
-    // 如果是新添加的选项，push进数组
-    if(isExisted == -1){
-      this.data.wrongInfoArray.push({index,wrongInfo})
-    }else{
-      // 如果不是，修改对应选项
-      this.data.wrongInfoArray[index] = {index,wrongInfo}
-    }
+    // let isExisted = this.data.wrongInfoArray.findIndex((item) => {
+    //   return 
+    // })
+    // console.log(isExisted)
+      let wrongInfoArray = this.data.wrongInfoArray
+      wrongInfoArray[idx] = wrongInfo
+      this.setData({
+        wrongInfoArray
+      })
     console.log(this.data.wrongInfoArray)
+  },
+  /**
+   * 提交错误信息
+   * @method submitWrong
+   */
+  submitWrong: function () {
+    Dialog.alert({
+      message: '提交成功',
+      confirmButtonText: '知道了',
+      showCancelButton: false
+    })
   }
 })

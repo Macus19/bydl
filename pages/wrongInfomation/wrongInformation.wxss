@@ -11,6 +11,7 @@
   min-height:75rpx;
   border:solid 2rpx #4343b7;
   border-radius: 37rpx;
+  padding-left: 40rpx;
 }
 .wrong-info-btn{
   width: 340rpx;

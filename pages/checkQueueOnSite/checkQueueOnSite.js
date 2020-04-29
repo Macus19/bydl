@@ -5,6 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    isInQueue:false,
+    myNumber:18,
+    myPosition:'1组1号',
     // 当前位置
     currentPosition:'*组*位',
     // 准备位置
@@ -54,7 +57,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let isInQueue = options.isInQueue
+    this.setData({
+      isInQueue:isInQueue
+    })
   },
 
   /**

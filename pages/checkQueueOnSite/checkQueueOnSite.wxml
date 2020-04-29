@@ -1,4 +1,12 @@
 <!--pages/checkQueueOnSite/checkQueueOnSite.wxml-->
+<!-- 我的位置 -->
+<view wx:if="{{isInQueue}}" class="check-queue-my">
+	<view class="check-queue-my-positon">我的位置</view>
+	<view class="check-queue-my-positon-content">
+		<view class="check-queue-my-positon-number">{{myNumber}}</view>
+		<text>{{myPosition}}</text>
+	</view>
+</view>
 <!-- 正在颁发队列 -->
 <view class="check-queue-current">
 	<view class="check-queue-current-title">正在颁发队列</view>

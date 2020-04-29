@@ -176,3 +176,19 @@
 .ceremony-scene-mine-name,.ceremony-scene-my-positon{
   color: #bebed4;
 }
+.ceremony-scene-my-positon-content{
+  display: flex;
+  line-height: 36rpx;
+  vertical-align: middle;
+}
+.ceremony-scene-my-positon-number{
+  width:36rpx;
+  height: 36rpx;
+  background-color: #f37560;
+  color: #fff;
+  text-align: center;
+  line-height: 36rpx;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin: 0 10rpx;
+}

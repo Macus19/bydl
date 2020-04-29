@@ -1,7 +1,7 @@
 <!--pages/wrongInfomation/wrongInformation.wxml-->
 <view class="wrong-info-container">
-	<block wx:for="{{barNum}}">
-		<wrong-bar isFirstOne="{{index==0}}" data-id="{{index}}" bind:changeWrongInfo="getWrongInfo" bind:changeBarNum="changeBarNum"></wrong-bar>
+	<block wx:for="{{wrongInfoArray}}">
+		<wrong-bar isFirstOne="{{index !== 0}}"isLastOne="{{index !== wrongInfoArray.length-1}}" wrongObj="{{item}}" data-idx="{{index}}" bind:changeWrongInfo="getWrongInfo" bind:changeBarNum="changeBarNum"></wrong-bar>
 	</block>
 	<!-- 其他建议 -->
 	<view class="wrong-info-others">
@@ -10,7 +10,8 @@
 			<input type="text" class="other-input" />
 		</view>
 	</view>
-	<view class="wrong-info-btn" hover-class="blue-btn-click">
+	<view class="wrong-info-btn" bindtap="submitWrong" hover-class="blue-btn-click">
 		提交
 	</view>
+	<van-dialog id="van-dialog" confirm-button-color="#4343b7" />
 </view>

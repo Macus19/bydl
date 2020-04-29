@@ -26,7 +26,7 @@
 		</view>
 	</view>
 	<view class="change-bar-container-right">
-		<image class="add-icon" bindtap="addOneBar" src="/images/wrongInfomation/add.png"></image>
-		<image class="del-icon" wx:if="{{!isFirstOne}}" bindtap="deleteOneBar" src="/images/wrongInfomation/delete .png"></image>
+		<image class="add-icon" wx:if="{{!isLastOne}}" bindtap="addOneBar" src="/images/wrongInfomation/add.png"></image>
+		<image class="del-icon" wx:if="{{isLastOne}}" bindtap="deleteOneBar" src="/images/wrongInfomation/delete.png"></image>
 	</view>
 </view>

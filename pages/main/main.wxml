@@ -8,7 +8,7 @@
       <view>2020毕业典礼</view>
     </view>
     <!-- 个人信息头像 -->
-    <view class="introduction-avatar" bindtap="turnToLoginPage">
+    <view class="introduction-avatar" bindtap="turnToMinePage">
       <image src="/images/main/my.png"></image>
     </view>
   </view>

@@ -9,7 +9,7 @@
 				<view>2020毕业典礼</view>
 			</view>
 			<!-- 个人信息头像 -->
-			<view class="introduction-avatar" bindtap="turnToLoginPage">
+			<view class="introduction-avatar" bindtap="turnToMinePage">
 				<image src="/images/main/my.png"></image>
 			</view>
 		</view>
@@ -24,7 +24,10 @@
 		<view class="ceremony-scene-middle-divider"></view>
 		<view class="ceremony-scene-mine-position">
 			<view class="ceremony-scene-my-positon">我的位置</view>
-			<view>{{myPosition}}</view>
+			<view class="ceremony-scene-my-positon-content">
+				<view class="ceremony-scene-my-positon-number">{{myNumber}}</view>
+				<text>{{myPosition}}</text>
+			</view>
 		</view>
 	</view>
 	<!-- 中间的框框 -->
@@ -76,7 +79,7 @@
 	<!-- 底部按钮栏 -->
 	<view class="ceremony-scene-bottom">
 		<view class="ceremony-scene-scan-btn" bindtap="quitQueue" hover-class="orange-btn-click">退出队列</view>
-		<view class="ceremony-scene-checkList-btn" hover-class="blue-btn-click">查看现场队列</view>
+		<view class="ceremony-scene-checkList-btn" bindtap="turnToCheckQueueOnSite" hover-class="blue-btn-click">查看现场队列</view>
 	</view>
-	<van-dialog id="van-dialog" confirm-button-color="#4343b7"  cancel-button-color="#bebed4"/>
+	<van-dialog id="van-dialog" confirm-button-color="#4343b7" cancel-button-color="#bebed4" />
 </view>

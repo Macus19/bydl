@@ -95,9 +95,19 @@ Page({
    * 跳转到查看现场队列页面
    * @method turnToScanedCeremonyScene
    */
-  turnToCheckQueueOnSite:function(){
+  turnToCheckQueueOnSite: function () {
     wx.navigateTo({
       url: '../checkQueueOnSite/checkQueueOnSite',
     })
-  }
+  },
+  /**
+   * 跳转至我的页面
+   * @method turnToMinePage
+   */
+  turnToMinePage: function () {
+    console.log(1)
+    wx.navigateTo({
+      url: '../mine/mine',
+    })
+  },
 })
