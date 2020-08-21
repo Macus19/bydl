@@ -5,6 +5,11 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    // 拼音
+    pinyin: {
+      type: String,
+      value: ''
+    },
     // 序号
     position:{
       type:Number,
@@ -17,11 +22,11 @@ Component({
     },
   },
   externalClasses:['bg-color'],
-  attached:function(){
-    this.setData({
-      pinyin:pinyin.getFullChars(this.data.name)
-    })
-  },
+  // attached:function(){
+  //   this.setData({
+  //     pinyin:pinyin.getFullChars(this.data.name)
+  //   })
+  // },
   /**
    * 组件的初始数据
    */

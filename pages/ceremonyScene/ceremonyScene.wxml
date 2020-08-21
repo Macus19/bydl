@@ -14,8 +14,19 @@
 			</view>
 		</view>
 	</view>
+	<view class="user-container" wx:if="{{isInQueue}}">
+	  <view class="user-container-bar">
+			<view>{{studentInfo.username}}</view>
+			<view class="ceremony-scene-middle-topbar-number">{{studentInfo.number}}</view>
+		</view>
+		<view class="ceremony-scene-middle-divider"></view>
+		<view class="user-container-bar">
+			<view>我的位置</view>
+			<view class="ceremony-scene-middle-topbar-number">{{pos.group}}组{{pos.position}}位</view>
+		</view>
+	</view>
 	<!-- 中间的框框 -->
-	<view class="ceremony-scene-middle">
+	<view class="ceremony-scene-middle {{isInQueue ? 'more-middle-top' : 'normal-middle-top'}}" >
 		<!-- 头部栏 -->
 		<view class="ceremony-scene-middle-topbar">
 			<view>正在颁发</view>
@@ -27,7 +38,7 @@
 		<view class="ceremony-scene-middle-content">
 			<!-- 最左边介绍 -->
 			<view class="ceremony-scene-content-menu">
-				<view>报名人数</view>
+				<view>签到人数</view>
 				<view>已颁人数</view>
 				<view>未颁人数</view>
 			</view>
@@ -35,30 +46,32 @@
 				<!-- 博士 -->
 				<view class="ceremony-scene-content-doctor">
 					<view class="ceremony-scene-content-title">博士</view>
-					<view class="ceremony-scene-content-number">{{doctors.signup}}</view>
-					<view class="ceremony-scene-content-number">{{doctors.notAward}}</view>
-					<view class="ceremony-scene-content-number">{{doctors.awarded}}</view>
+					<view class="ceremony-scene-content-number">{{doctor.total}}</view>
+					<view class="ceremony-scene-content-number">{{doctor.left}}</view>
+					<view class="ceremony-scene-content-number">{{doctor.complete}}</view>
 				</view>
 				<!-- 硕士 -->
 				<view class="ceremony-scene-content-master">
 					<view class="ceremony-scene-content-title">硕士</view>
-					<view class="ceremony-scene-content-number">{{masters.signup}}</view>
-					<view class="ceremony-scene-content-number">{{masters.notAward}}</view>
-					<view class="ceremony-scene-content-number">{{masters.awarded}}</view>
+					<view class="ceremony-scene-content-number">{{master.total}}</view>
+					<view class="ceremony-scene-content-number">{{master.left}}</view>
+					<view class="ceremony-scene-content-number">{{master.complete}}</view>
 				</view>
 				<!-- 学士 -->
 				<view class="ceremony-scene-content-bachelor">
 					<view class="ceremony-scene-content-title">本科</view>
-					<view class="ceremony-scene-content-number">{{bachelors.signup}}</view>
-					<view class="ceremony-scene-content-number">{{bachelors.notAward}}</view>
-					<view class="ceremony-scene-content-number">{{bachelors.awarded}}</view>
+					<view class="ceremony-scene-content-number">{{bachelor.total}}</view>
+					<view class="ceremony-scene-content-number">{{bachelor.left}}</view>
+					<view class="ceremony-scene-content-number">{{bachelor.complete}}</view>
 				</view>
 			</view>
 		</view>
 	</view>
 	<!-- 底部按钮栏 -->
-	<view class="ceremony-scene-bottom">
-		<view class="ceremony-scene-scan-btn" bindtap="turnToScanedCeremonyScene" hover-class="orange-btn-click">扫码加入</view>
+	<view class="ceremony-scene-bottom {{isInQueue ? 'more-bottom-top' : 'normal-bottom-top'}}">
+		<view wx:if="{{isInQueue}}" class="ceremony-scene-scan-btn" bindtap="turnToScanedCeremonyScene" hover-class="orange-btn-click">扫码加入</view>
+		<view wx:if="{{!isInQueue}}" class="ceremony-scene-scan-btn" bindtap="removeQueue" hover-class="orange-btn-click">退出队列</view>
 		<view class="ceremony-scene-checkList-btn" bindtap="turnToCheckQueueOnSite" hover-class="blue-btn-click">查看现场队列</view>
 	</view>
+	<van-dialog id="van-dialog"  confirm-button-color="#4343b7"/>
 </view>

@@ -34,6 +34,11 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    /**
+     * collage_id 学院id
+     * identity 身份
+     * token token
+     */
+    userInfo: {}
   }
 })

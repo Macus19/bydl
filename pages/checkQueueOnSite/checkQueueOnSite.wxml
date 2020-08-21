@@ -3,8 +3,8 @@
 <view wx:if="{{isInQueue}}" class="check-queue-my">
 	<view class="check-queue-my-positon">我的位置</view>
 	<view class="check-queue-my-positon-content">
-		<view class="check-queue-my-positon-number">{{myNumber}}</view>
-		<text>{{myPosition}}</text>
+		第<view class="check-queue-my-positon-number">{{pos.group}}</view>组
+		<text>第{{pos.position}}个</text>
 	</view>
 </view>
 <!-- 正在颁发队列 -->
@@ -14,17 +14,17 @@
 	<view class="check-queue-current-position-info">
 		<view class="current-position-info-group">
 			<image src="/images/checkQueueOnSite/group-purple.png"></image>
-			<text>{{currentPosition}}</text>
+			<text>每组{{interval}}人</text>
 		</view>
 		<view class="current-position-info-number">
 			<image src="/images/checkQueueOnSite/number-purple.png"></image>
-			<text>{{currentNumber}}</text>
+			<text>当前第{{currentNumber}}组</text>
 		</view>
 	</view>
 	<!-- 显示当前多少人 -->
 	<view class="check-queue-current-list">
 		<block wx:for="{{currentList}}">
-			<queue-bar class="check-queue-current-queue-bar" name="{{item.name}}" position="{{item.position}}" bg-color="bg-color"></queue-bar>
+			<queue-bar class="check-queue-current-queue-bar" pinyin="{{item.spelling}}" name="{{item.username}}" position="{{item.position}}" bg-color="bg-color"></queue-bar>
 		</block>
 	</view>
 </view>
@@ -32,18 +32,19 @@
 	<view class="check-queue-ready-title">准备队列</view>
 	<!-- 当前位置信息 -->
 	<view class="check-queue-ready-position-info">
-		<view class="ready-position-info-group">
+		<!-- <view class="ready-position-info-group">
 			<image src="/images/checkQueueOnSite/group-orange.png"></image>
 			<text>{{readyPosition}}</text>
-		</view>
+		</view> -->
 		<view class="ready-position-info-number">
 			<image src="/images/checkQueueOnSite/number-orange.png"></image>
-			<text>{{readyNumber}}</text>
+			<text>{{beginGroup}}-{{endGroup}}组</text>
 		</view>
 	</view>
 	<view class="check-queue-ready-list">
-		<block wx:for="{{currentList}}">
-			<queue-bar class="check-queue-ready-queue-bar" name="{{item.name}}" position="{{item.position}}" bg-color="bg-color-o"></queue-bar>
+		<block wx:for="{{group}}">
+			<queue-bar class="check-queue-ready-queue-bar" pinyin="{{item.spelling}}" name="{{item.username}}" position="{{item.position}}" bg-color="bg-color-o"></queue-bar>
 		</block>
 	</view>
+	<view class="more-btn">点击加载更多</view>
 </view>

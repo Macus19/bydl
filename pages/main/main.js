@@ -1,4 +1,5 @@
 //index.js
+import { fetch } from '../../utils/request'
 //获取应用实例
 const app = getApp()
 
@@ -14,6 +15,19 @@ Page({
     currentSwiperIndex: 0
   },
   onLoad: function () {
+    this.getBanner()
+  },
+  getBanner: function () {
+    fetch({
+      url: '/admin/get_photo',
+      method: 'GET',
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        token: getApp().globalData.userInfo.token
+      }
+    }).then((res) => {
+      this.swiperImageList = res.data
+    })
   },
   /**
    * 轮播图播放时切换当前对应高亮指示点

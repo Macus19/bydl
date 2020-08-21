@@ -1,6 +1,8 @@
 <!--components/checkQueueOnSite/QueueBar/QueueBar.wxml-->
 <view class="queue-bar-container">
 	<view class="queue-bar-position bg-color">{{position}}</view>
-	<view class="queue-bar-name">{{name}}</view>
-	<view class="queue-bar-pinyin">{{pinyin}}</view>
+	<view class="queue-bar-text">
+	  <view class="queue-bar-name">{{name}}</view>
+	  <view class="queue-bar-pinyin">{{pinyin}}</view>
+	</view>
 </view>

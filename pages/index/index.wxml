@@ -9,6 +9,6 @@
     <input class="login-input" type="password" placeholder="初始密码为身份证后六位" placeholder-class="login-placeholder" value="{{password}}" bindinput="getPassword">    </input>
     <image bindtap="clearPasswordInput" wx:if="{{isShowClearButton}}" class="login-input-clear" src="/images/index/clear.png"></image>
   </view>
-  <view class="login-button {{isButtonActivate?'login-button-active':'login-button-normal'}}" hover-class="{{isButtonActivate?'blue-btn-click':''}}" bindtap="turnToMainPage">登录</view>
+  <view class="login-button {{isButtonActivate?'login-button-active':'login-button-normal'}}" hover-class="{{isButtonActivate?'blue-btn-click':''}}" bindtap="login">登录</view>
   <view class="login-about" bindtap="turnToAboutPage">关于毕业典礼</view>
 </view>

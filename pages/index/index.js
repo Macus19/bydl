@@ -1,4 +1,6 @@
 // pages/login/login.js
+import { fetch } from '../../utils/request'
+
 Page({
 
   /**
@@ -23,7 +25,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    // fetch({
+    //   url: '/admin/index/index',
+    //   method:'POST',
+    //   data:{
+    //     token:'login',
+    //     type:'A002',
+    //     data:{
+    //       username:'2003123123',
+    //       password:'123456'
+    //     }
+    //   }
+    // }).then((res)=>{
+    //   console.log(res)
+    // })
   },
 
   /**
@@ -160,11 +175,33 @@ Page({
    * 跳转至主页面
    * @method turnToMainPage
    */
-  turnToMainPage: function(){
+  login: function(){
     // 如果按钮为激活状态
     if(this.data.isButtonActivate){
-      wx.navigateTo({
-        url: '../main/main',
+      wx.login({
+        success:(res)=>{
+          console.log(res.code)
+          if(res.code){
+            fetch({
+              url:'/user/wx_login',
+              method:'POST',
+              data:{
+                code:res.code,
+                number:this.data.studentId,
+                password:this.data.password
+              },
+              header: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+              }
+            }).then((res)=>{
+              console.log(res)
+              getApp().globalData.userInfo = res.data
+              wx.navigateTo({
+                url: '../main/main',
+              })
+            })
+          }
+        }
       })
     }
   },

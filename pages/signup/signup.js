@@ -1,5 +1,8 @@
 // pages/signup/signup.js
 import Dialog from '@vant/weapp/dialog/dialog'
+import {
+  fetch
+} from '../../utils/request'
 
 Page({
   /**
@@ -8,21 +11,24 @@ Page({
   data: {
     // 当前登陆的学生的信息
     studentInfo: {
+      collage_id: 1,
       name: '黄小饼', // 姓名
-      educationBackground: '本科', // 学历
-      collage: '商学院',  //  学院
-      majaoAndClass: '电子商务1701班',  // 专业班级
-      studentID: '201710000000',  // 学号
-      degreeOne: '管理学学位',  // 学位一
-      degreeTwo: '无',  // 学位二
-      nationality: '中国'  // 国籍
+      education_background: '本科', // 学历
+      collage_name: '商学院', //  学院
+      major_class: '电子商务1701班', // 专业班级
+      number: '201710000000', // 学号
+      degree1: '管理学学位', // 学位一
+      degree2: '无', // 学位二
+      nationality: '中国' // 国籍
     },
+    educationMap: [' ', '本科', '硕士', '博士']
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.getUserInfo()
   },
 
   /**
@@ -74,26 +80,51 @@ Page({
 
   },
   /**
+   * 获取小程序用户信息
+   */
+  getUserInfo: function () {
+    fetch({
+      url: '/user/personal_info',
+      mathod: 'GET',
+      header: {
+        token: getApp().globalData.userInfo.token
+      }
+    }).then((res) => {
+      this.setData({
+        studentInfo: res.data
+      })
+    })
+  },
+  /**
    * 点击确认报名
    * @method confirmSignup
    */
-  confirmSignup: function(){
+  confirmSignup: function () {
     Dialog.confirm({
       title: '确定要报名吗？',
       message: '报名后无法取消！',
-      }).then(()=>{
+    }).then(() => {
+      fetch({
+        url: '/user/sign',
+        method: 'POST',
+        header: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          token: getApp().globalData.userInfo.token
+        },
+      }).then((res) => {
         Dialog.alert({
           message: '报名成功',
           confirmButtonText: '知道了',
           showCancelButton: false
         })
       })
+    })
   },
   /**
    * 跳转到信息有误页面
    * @method turnToWrongInfoPage
    */
-  turnToWrongInfoPage:function(){
+  turnToWrongInfoPage: function () {
     wx.navigateTo({
       url: '../wrongInfomation/wrongInformation',
     })
@@ -102,7 +133,7 @@ Page({
    * 跳转到关于毕业典礼页面
    * @method turnToAboutPage
    */
-  turnToAboutPage:function(){
+  turnToAboutPage: function () {
     wx.navigateTo({
       url: '../about/about',
     })
